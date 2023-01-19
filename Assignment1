@@ -1,0 +1,114 @@
+#ques1.
+print(*****)
+print(   * )
+print(  *  )
+print( *   )
+print(*****)
+
+#ques2.
+marks=int(input("Marks of the student:"))
+if marks>90:
+  print("Excellent")
+elif 80<marks<=90 :
+  print("Good")
+elif 70<marks<=80:
+  print("fair")
+elif 60<marks<=70:
+  print("meets expectations")
+else:
+  print("below par")    
+  
+#ques3.
+t=int(input("No. of numbers to be tested:"))
+for i in range(0,t):
+  n=int(input("Enter a number:"))
+  count=0
+  for i in range(1,n+1):
+    if n%i==0:
+      count=count+1
+  if count==2:
+    print("prime")
+  else:
+    print("not prime")   
+ 
+ #ques4.
+low=int(input("Enter the lower limit of range:"))
+high=int(input("Enter the higher limit of range:"))
+for i in range(low,high+1):
+  count=0
+  for j in range(1,high+1):
+    if i%j==0:
+      count+=1
+  if count==2:
+    print(i)    
+ 
+ #ques5.
+n=int(input("Enter a positive number:"))
+digits=0
+while n>0:
+  n=n//10
+  digits+=1
+print("digits:",digits)
+
+#ques6.
+n=int(input("Enter number: ")) 
+rev=0
+while(n>0):
+   dig=n%10
+   rev=rev*10+dig 
+   n=n//10 
+print("Reverse of the number: ",rev)
+
+#ques8.
+#rotate a number
+n = input()
+k = int(input())
+l = list(n)
+if k > 0:
+    for i in range(k):
+        a = l.pop()
+        l.insert(0,a)
+    for j in l:
+        print(j,end='')
+elif k < 0:
+    for i in range(-k):
+        b = l.pop(0)
+        l.append(b)
+    for j in l:
+        print(j,end='')
+else:
+    print(n)
+    
+#ques9.
+# gcd and lcm
+num1 = int(input())
+num2 = int(input())
+if num1 > num2 :
+    #gcd
+    for i in range(num2,0,-1):
+        if num1 % i == 0 and num2 % i == 0:
+            print(i)
+            break
+    #lcm
+    p = num1 * num2
+    for i in range(num1,p+1):
+        if i % num2 == 0 and i % num1 == 0:
+            print(i)
+            break
+
+if num2 > num1 :
+    #gcd
+    for i in range(num1,0,-1):
+        if num1 % i == 0 and num2 % i == 0:
+            print(i)
+            break
+    #lcm
+    p = num1 * num2
+    for i in range(num2,p+1):
+        if i % num2 == 0 and i % num1 == 0:
+            print(i)
+            break
+#ques10.
+
+    
+  
